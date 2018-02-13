@@ -1,6 +1,8 @@
 # TSE18
 TSE18 is a tool to visualize the performance of 4 Information Retrieval (IR) methods: Vector-Space Model (VSM), Latent Semantic Indexing (LSI), Jensen-Shannon Model (JSM), and Pointwise Mutual Information (PMI) on bug localization.
 
+![ScreenShot](https://github.com/seelprojects/TSE18/blob/master/src/image.jpg)
+
 ### Getting Started
 TSE18 is a single file .exe tool that can be run without any external support. The main window provides following options:
 
