@@ -16,7 +16,7 @@ This method will be treated as the base method.
 This method will be combined with method i.
 
 #### Metric
-Available performance measures are T<sub>1</sub>, TR<sub>5</sub>, TR<sub>10</sub>, MAP, and MRR.
+Available performance measures are TR<sub>1</sub>, TR<sub>5</sub>, TR<sub>10</sub>, MAP, and MRR.
 
 ### Development Environment
 In order to open and modify the C# source project you will need:
