@@ -161,9 +161,9 @@
             // 
             this.listBoxMetric.FormattingEnabled = true;
             this.listBoxMetric.Items.AddRange(new object[] {
-            "Top 01",
-            "Top 05",
-            "Top 10",
+            "TR1",
+            "TR5",
+            "TR10",
             "MAP",
             "MRR"});
             this.listBoxMetric.Location = new System.Drawing.Point(6, 18);

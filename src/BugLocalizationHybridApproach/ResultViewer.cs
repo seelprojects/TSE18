@@ -21,6 +21,7 @@ namespace BugLocalizationHybridApproach
 
         private void buttonExecute_Click(object sender, EventArgs e)
         {
+
             Execute();
         }
 
@@ -29,22 +30,22 @@ namespace BugLocalizationHybridApproach
             var projectNames = (from object selectedDataset in listBoxDataset.SelectedItems select selectedDataset.ToString()).ToList();
             var methodINames = (from object selectedMethodI in listBoxMethodI.SelectedItems select selectedMethodI.ToString()).ToList();
             var methodJNames = (from object selectedMethodJ in listBoxMethodJ.SelectedItems select selectedMethodJ.ToString()).ToList();
-            var metricToUse = listBoxMetric.SelectedItem.ToString();
+            var metricToUse = listBoxMetric.SelectedItem?.ToString();
 
             var warningMessages = new List<string>();
             if (projectNames.Count == 0)
             {
-                warningMessages.Add("Please select atleast one project.");
+                warningMessages.Add("Please select at least one project.");
             }
 
             if (methodINames.Count == 0)
             {
-                warningMessages.Add("Please select atleast on method i.");
+                warningMessages.Add("Please select at least one method i.");
             }
 
             if (methodJNames.Count == 0)
             {
-                warningMessages.Add("Please select atleast one method j.");
+                warningMessages.Add("Please select at least one method j.");
             }
 
             if (string.IsNullOrWhiteSpace(metricToUse))
@@ -178,12 +179,15 @@ namespace BugLocalizationHybridApproach
             switch (metricToUse)
             {
                 case "Top 01":
+                case "TR1":
                     return result.Top01Percent;
 
                 case "Top 05":
+                case "TR5":
                     return result.Top05Percent;
 
                 case "Top 10":
+                case "TR10":
                     return result.Top10Percent;
 
                 case "MRR":
@@ -263,7 +267,7 @@ namespace BugLocalizationHybridApproach
                 chart.Series.Add(series);
             }
 
-            chart.Titles.Add($"{projectName} - {methodIName}");
+            chart.Titles.Add($"{projectName} - {methodIName} - {metricToUse}");
 
             return chart;
         }
@@ -289,9 +293,9 @@ namespace BugLocalizationHybridApproach
         #endregion
 
 
-        public void ShowWarning(List<string> message)
+        public void ShowWarning(List<string> messages)
         {
-
+            MessageBox.Show(this, messages.First(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void listBoxMetric_SelectedValueChanged(object sender, EventArgs e)
