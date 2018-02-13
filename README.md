@@ -39,4 +39,4 @@ In order to open and modify the C# source project you will need:
 Once available, open BugLocalizationHybridApproach.sln in [src](src/) directory in Visual Studio.
 
 ### Resources
-The performance metric for all projects and method combinations are provided as an XML format. Users can find the XMLs in [src/BugLocalizationHybridApproach/Resources](src/BugLocalizationHybridApproach/Resources/).
+The performance metric for all projects and method combinations are provided as an XML format. Users can find the XMLs in [src/BugLocalizationHybridApproach/Resources](src/BugLocalizationHybridApproach/Resources/). The full dataset can be downloaded from: [http://seel.cse.lsu.edu/data/ist17.zip](http://seel.cse.lsu.edu/data/ist17.zip).
